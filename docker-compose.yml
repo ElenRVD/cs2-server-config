@@ -6,7 +6,7 @@ services:
       # Server configuration
       - DEBUG=0                     # (0 - off, 1 - steamcmd, 2 - cs2, 3 - all)
       - STEAMAPPVALIDATE=0          # (0 - no validation, 1 - enable validation)
-      - CS2_SERVERNAME=changeme     # (Set the visible name for your private server.)
+      - CS2_SERVERNAME="AtomRVD server"     # (Set the visible name for your private server.)
       - CS2_CHEATS=0                # (0 - disable cheats, 1 - enable cheats)
       - CS2_PORT=27015              # (CS2 server listen port tcp_udp)
       - CS2_SERVER_HIBERNATE=0      # (Put server in a low CPU state when there are no players. 0 - hibernation disabled, 1 - hibernation enabled)
@@ -25,19 +25,10 @@ services:
       - CS2_STARTMAP=de_inferno     # (Start map. Ignored if Workshop maps are defined.)
       # Workshop Maps
       - CS2_HOST_WORKSHOP_COLLECTION # The workshop collection to use
-      - CS2_HOST_WORKSHOP_MAP        # The workshop map to use. If collection is also defined, this is the starting map.
+      - CS2_HOST_WORKSHOP_MAP=3570561209        # The workshop map to use. If collection is also defined, this is the starting map.
       # Bots
-      - CS2_BOT_DIFFICULTY          # (0 - easy, 1 - normal, 2 - hard, 3 - expert)
-      - CS2_BOT_QUOTA               # (Number of bots)
-      - CS2_BOT_QUOTA_MODE          # (fill, competitive)
-      # TV
-      - TV_AUTORECORD=0             # Automatically records all games as CSTV demos: 0=off, 1=on.
-      - TV_ENABLE=0                 # Activates CSTV on server: 0=off, 1=on.
-      - TV_PORT=27020               # Host SourceTV port
-      - TV_PW=changeme              # CSTV password for clients
-      - TV_RELAY_PW=changeme        # CSTV password for relay proxies
-      - TV_MAXRATE=0                # World snapshots to broadcast per second. Affects camera tickrate.
-      - TV_DELAY=0                  # CSTV broadcast delay in seconds
+      - CS2_BOT_DIFFICULTY=0          # (0 - easy, 1 - normal, 2 - hard, 3 - expert)
+      - CS2_BOT_QUOTA=0               # (Number of bots)
       # Logs
       - CS2_LOG=on                  # 'on'/'off'
       - CS2_LOG_MONEY=0             # Turns money logging on/off: (0=off, 1=on)
